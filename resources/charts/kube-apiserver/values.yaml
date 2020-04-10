@@ -1,0 +1,22 @@
+apiserver:
+  apiserverKey:
+  apiserverCert:
+  serviceAccountPub:
+  caCert:
+  etcdClientCaCert:
+  etcdClientCert:
+  etcdClientKey:
+  aggregationCaCert:
+  aggregationClientCert:
+  aggregationClientKey:
+  image: k8s.gcr.io/kube-apiserver:v1.18.0
+  cloudProvider:
+  etcdServers:
+  aggregationFlags:
+  serviceCIDR: 10.0.0.0/24
+  trustedCertsDir: /usr/share/ca-certificates
+  replicas: 1
+  # If this is true, kube-apiserver will be exposed on HostIP on port 7443 to the cluster
+  # service (kubernetes.default.svc) and on all interfaces on port 6443.
+  # If false, it will be exposed only on HostIP on port 6443.
+  exposeOnAllInterfaces: false
